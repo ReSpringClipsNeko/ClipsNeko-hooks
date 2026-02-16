@@ -2,7 +2,7 @@
 
 Pacman hooks for setting up system identification files and other features of ClipsNeko Linux.
 
-Modified from CachyOS's ![repository](https://github.com/CachyOS/cachyos-hooks)
+Modified from [CachyOS's repository](https://github.com/CachyOS/cachyos-hooks)
 
 File name | Description
 :--- | :---
