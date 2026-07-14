@@ -32,6 +32,13 @@ update_issues() {
     sed -i 's|Arch Linux|ClipsNeko Linux|g' /etc/issue /usr/share/factory/etc/issue
 }
 
+update_grub() {
+    local def_grub="/etc/default/grub"
+    sed -i "$def_grub" \
+        -e 's|^GRUB_DISTRIBUTOR=.*$|GRUB_DISTRIBUTOR=\"ClipsNeko\"|'
+}
+    
+
 case "$1" in
     os-release) update_os_release ;;
     lsb-release) update_lsb_release ;;
@@ -39,5 +46,6 @@ case "$1" in
         update_os_release
         update_lsb_release
         update_issues
+        update_grub
         ;;
 esac
